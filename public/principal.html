@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="selectize.default.css">
+<link rel="stylesheet" href="tooltipster.bundle.min.css">
+
+<head>
+    <title class="text-center">BolsoTyper</title>
+</head>
+<body>
+    <div class="container text-center">
+        <h1 class="display-2">BolsoTyper</h1>
+        <p class="frase pl-5 text-left">Não vou combater nem discriminar, mas se eu vir dois homens se beijando na rua, vou bater</p>
+        
+        <div class="text-center" >
+            <p id="erro"> Deu barba, Família, tenta dnv </p>
+            <img src="img/spinner.gif" alt="carregando" id="carregamento">
+        </div>
+
+        <ul class="informações list-group">
+            <li class="list-group-item"><span id="tamanho">30</span> palavras 🖋</li>
+            <li class="list-group-item"><span id="tempo">2</span> segundos ⏲</li>
+        </ul>
+        
+        <textarea class="campoDigitacao w-100" rows="5" column="40"></textarea>
+        <div class="container">
+            <button class="btn btn-primary" id="reiniciar">Reiniciar</button>
+            <button class="btn btn-primary" id="btn-placar">Placar</button>
+            <button class="btn btn-primary" id="btn-change">Trocar Frase</button>
+            <button class="btn btn-primary" id="btn-frase">Escolha a frase</button>
+            <input type="number" id="frase-id" min="0">  
+            <div class="select-user">
+                <select id="usuarios">
+
+                </select>
+            </div>
+            <button class="tooltip btn btn-primary" title="sincronizadaralhasso" id="btn-sync">Sincronizar placar</button>
+        </div>
+        <ul class="informações list-group">
+            <li class="list-group-item"><span id="contadorCaracteres">0</span> caracteres</li>
+            <li class="list-group-item"><span id="contadorPalavras"> 0 </span> palavras 📝</li>
+        </ul>
+        
+        <section class="placar">
+            <h3>Placar</h3>
+            <table class="table table-dark">
+                <thead>
+                    <tr>
+                        <th scope="col">nome</th>
+                        <th scope="col">letras certas</th>
+                        <th scope="col">Remover</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Fábio</th>
+                        <td>561651681</td>
+                        <td>Jamais!</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </div>
+    
+    <script src="jquery.min.js"></script>
+    <script src="typer.js"></script>
+    <script src="placar.js"></script>
+    <script src="frases.js"></script>
+    <script src="selectize.js"></script>
+    <script src="tooltipster.bundle.min.js"></script>
+    
+</body>
